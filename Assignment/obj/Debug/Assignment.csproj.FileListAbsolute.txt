@@ -1,0 +1,45 @@
+C:\Users\sumit\Desktop\Study\software process\Assignment\bin\Debug\Assignment.exe.config
+C:\Users\sumit\Desktop\Study\software process\Assignment\bin\Debug\Assignment.exe
+C:\Users\sumit\Desktop\Study\software process\Assignment\bin\Debug\Assignment.pdb
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\Assignment.csprojAssemblyReference.cache
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\MainWindow.g.cs
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\App.g.cs
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\Assignment_MarkupCompile.cache
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\Assignment_MarkupCompile.lref
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\MainWindow.baml
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\Assignment.g.resources
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\Assignment.Properties.Resources.resources
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\Assignment.csproj.GenerateResource.cache
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\Assignment.csproj.CoreCompileInputs.cache
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\Assignment.exe
+C:\Users\sumit\Desktop\Study\software process\Assignment\obj\Debug\Assignment.pdb
+E:\Assignment\bin\Debug\Assignment.exe.config
+E:\Assignment\bin\Debug\Assignment.exe
+E:\Assignment\bin\Debug\Assignment.pdb
+E:\Assignment\obj\Debug\Assignment.csprojAssemblyReference.cache
+E:\Assignment\obj\Debug\MainWindow.g.cs
+E:\Assignment\obj\Debug\App.g.cs
+E:\Assignment\obj\Debug\Assignment_MarkupCompile.cache
+E:\Assignment\obj\Debug\Assignment_MarkupCompile.lref
+E:\Assignment\obj\Debug\MainWindow.baml
+E:\Assignment\obj\Debug\Assignment.g.resources
+E:\Assignment\obj\Debug\Assignment.Properties.Resources.resources
+E:\Assignment\obj\Debug\Assignment.csproj.GenerateResource.cache
+E:\Assignment\obj\Debug\Assignment.csproj.CoreCompileInputs.cache
+E:\Assignment\obj\Debug\Assignment.exe
+E:\Assignment\obj\Debug\Assignment.pdb
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\bin\Debug\Assignment.exe.config
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\bin\Debug\Assignment.exe
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\bin\Debug\Assignment.pdb
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\Assignment.csprojAssemblyReference.cache
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\MainWindow.g.cs
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\App.g.cs
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\Assignment_MarkupCompile.cache
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\Assignment_MarkupCompile.lref
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\MainWindow.baml
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\Assignment.g.resources
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\Assignment.Properties.Resources.resources
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\Assignment.csproj.GenerateResource.cache
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\Assignment.csproj.CoreCompileInputs.cache
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\Assignment.exe
+\\store.uict.nz\hdrives\1821913\Desktop\Assignment\obj\Debug\Assignment.pdb
