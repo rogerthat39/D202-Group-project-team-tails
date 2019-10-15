@@ -62,17 +62,17 @@
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Button Content="Display by major" Margin="10,0,0,0"/>
-            <Button Content="Display by semester" Margin="10,0,0,0"/>
+            <Button Content="Display by major" Margin="10,0,0,0" Click="displayByMajor"/>
+            <Button Content="Display by semester" Margin="10,0,0,0" Click="displayBySemester"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Button Content="Add paper to academic history" Margin="10,0,0,0"/>
-            <Button Content="View academic history" Margin="10,0,0,0"/>
-            <Button Content="View courses" Margin="10,0,0,0"/>
+            <Button Content="Add paper to academic history" Margin="10,0,0,0" Click="addPaperToHistory"/>
+            <Button Content="View academic history" Margin="10,0,0,0" Click="viewAcademicHistory"/>
+            <Button Content="View courses" Margin="10,0,0,0" Click="viewCourses"/>
         </StackPanel>
 
-        <ListBox Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Margin="10"></ListBox>
+        <ListBox x:Name="listbox" Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Margin="10"></ListBox>
 
     </Grid>
 </Page>
