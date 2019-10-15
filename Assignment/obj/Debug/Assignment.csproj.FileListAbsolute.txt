@@ -88,3 +88,22 @@ C:\databse\Assignment\obj\Debug\Assignment.csproj.GenerateResource.cache
 C:\databse\Assignment\obj\Debug\Assignment.csproj.CoreCompileInputs.cache
 C:\databse\Assignment\obj\Debug\Assignment.exe
 C:\databse\Assignment\obj\Debug\Assignment.pdb
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\Assignment.csprojAssemblyReference.cache
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\LoginPage.g.cs
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\MainWindow.g.cs
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\App.g.cs
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\Assignment_MarkupCompile.cache
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\Assignment_MarkupCompile.lref
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\Assignment.exe
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\Assignment.pdb
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\bin\Debug\Assignment.exe.config
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\bin\Debug\Assignment.exe
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\bin\Debug\Assignment.pdb
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\MainPage.g.cs
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\LoginPage.baml
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\MainPage.baml
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\MainWindow.baml
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\Assignment.g.resources
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\Assignment.Properties.Resources.resources
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\Assignment.csproj.GenerateResource.cache
+\\store.uict.nz\hdrives\1821913\Desktop\D202-Group-project-team-tails-master (1)\D202-Group-project-team-tails-master\Assignment\obj\Debug\Assignment.csproj.CoreCompileInputs.cache
