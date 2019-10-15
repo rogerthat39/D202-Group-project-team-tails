@@ -24,7 +24,7 @@
 
             <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Username:" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="txtBoxUserName" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" MinWidth="150" IsEnabled="False"></TextBox>
+                <TextBox x:Name="txtBoxUserName" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" MinWidth="150"></TextBox>
             </StackPanel>
 
             <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -32,7 +32,7 @@
                 <TextBox x:Name="txtBoxPassword" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" MinWidth="150"></TextBox>
             </StackPanel>
 
-            <Button x:Name="registerBtn" Content="Register" Grid.Column="0" Grid.Row="3" FontSize ="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="clkRegistration"></Button>
+            <Button x:Name="loginBtn" Content="Login" Grid.Column="0" Grid.Row="3" FontSize ="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="clkLogin"></Button>
            
         </Grid>
     </Grid>

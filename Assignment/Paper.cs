@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment
 {
-    class Paper
+    class Paper: IComparable<Paper>
     {
         private string code;
         private string name;
@@ -40,7 +40,54 @@ namespace Assignment
 
         public override string ToString()
         {
-            return code + " " + name;
+            if (this.Semesters.Count == 2)
+            {
+                return code + " " + name + " -- Semesters: " + Semesters[0] + " and " + Semesters[1];
+            }
+            else
+            {
+                return code + " " + name + " -- Semester: " + Semesters[0];
+            }
+        }
+
+        public int CompareTo(Paper otherPaper)
+        {
+            //check the year and semester are not the same
+            if(this.Year == otherPaper.Year && this.Semesters == otherPaper.Semesters)
+            {
+                return 0;
+            }
+            //display papers with lowest year first
+            else if(this.Year > otherPaper.Year)
+            {
+                return 1;
+            }
+            else if (this.Year < otherPaper.Year)
+            {
+                return -1;
+            }
+            //if one paper has two semesters, it should be sorted below a paper with one semester
+            else if(this.Semesters.Count == 2 && otherPaper.Semesters.Count == 1)
+            {
+                return 1;
+            }
+            else if (this.Semesters.Count == 1 && otherPaper.Semesters.Count == 2)
+            {
+                return -1;
+            }
+            //display semesters with lowest number first
+            else if (this.Semesters[0] > otherPaper.Semesters[0])
+            {
+                return 1;
+            }
+            else if (this.Semesters[0] < otherPaper.Semesters[0])
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
