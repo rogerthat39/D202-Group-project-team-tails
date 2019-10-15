@@ -40,7 +40,7 @@ namespace Assignment
 
         public override string ToString()
         {
-            return Code + " " + Name;
+            return code + " " + name;
         }
     }
 }
