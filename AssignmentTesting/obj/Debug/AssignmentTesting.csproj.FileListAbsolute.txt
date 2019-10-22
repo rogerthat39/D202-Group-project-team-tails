@@ -1,0 +1,17 @@
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\AssignmentTesting.dll
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\AssignmentTesting.pdb
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\Assignment.exe
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\Assignment.pdb
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\Assignment.exe.config
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\D202-Group-project-team-tails-master\AssignmentTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\D202-Group-project-team-tails-master\AssignmentTesting\obj\Debug\AssignmentTesting.csprojAssemblyReference.cache
+C:\D202-Group-project-team-tails-master\AssignmentTesting\obj\Debug\AssignmentTesting.csproj.CoreCompileInputs.cache
+C:\D202-Group-project-team-tails-master\AssignmentTesting\obj\Debug\AssignmentTesting.csproj.CopyComplete
+C:\D202-Group-project-team-tails-master\AssignmentTesting\obj\Debug\AssignmentTesting.dll
+C:\D202-Group-project-team-tails-master\AssignmentTesting\obj\Debug\AssignmentTesting.pdb
