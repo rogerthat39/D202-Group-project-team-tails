@@ -27,14 +27,13 @@ namespace Assignment
             InitializeComponent();
         }
 
-        private void clkLogin(object sender, RoutedEventArgs e)
+        public void clkLogin(object sender, RoutedEventArgs e)
         {
             //open connection to database
-            SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\bin\Debug\ProjectDB.mdf;Integrated Security=True;Connect Timeout=30");
-            cn.Open();
+            ConnectionManager cm = new ConnectionManager();
 
             //build query
-            SqlCommand cnd = new SqlCommand("select * from Users where Username = @u and Password = @p", cn);
+            SqlCommand cnd = cm.Open("select * from Users where Username = @u and Password = @p");
 
             //add parameters
             SqlParameter username = cnd.Parameters.Add("@u", SqlDbType.VarChar);
@@ -66,7 +65,7 @@ namespace Assignment
                 MessageBox.Show("Incorrect username or password");
             }
 
-            cn.Close();
+            cm.Close();
         }
     }
 }

@@ -33,7 +33,7 @@ namespace Assignment
         List<Major> majorList = new List<Major>();
         List<Paper> academicHistory = new List<Paper>();
 
-        private void addPaperToHistory(object sender, RoutedEventArgs e)
+        public void addPaperToHistory(object sender, RoutedEventArgs e)
         {
             //check if a paper is selected
             if (listbox.SelectedIndex >= 0)
@@ -48,32 +48,29 @@ namespace Assignment
             }
         }
 
-        private void displayBySemester(object sender, RoutedEventArgs e)
+        public void displayBySemester(object sender, RoutedEventArgs e)
         {
             listbox.ItemsSource = null;
             paperList.Sort();
             listbox.ItemsSource = paperList;
         }
 
-        private void displayByMajor(object sender, RoutedEventArgs e)
+        public void displayByMajor(object sender, RoutedEventArgs e)
         {
             //?
         }
 
-        private void viewCourses(object sender, RoutedEventArgs e)
+        public void viewCourses(object sender, RoutedEventArgs e)
         {
             //clear list box and add the paper list
             listbox.ItemsSource = paperList;
         }
 
-        private void getPapers()
+        public void getPapers()
         {
-            //open connection to database
-            SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\bin\Debug\ProjectDB.mdf;Integrated Security=True;Connect Timeout=30");
-            cn.Open();
+            ConnectionManager cm = new ConnectionManager();
 
-            //build query
-            SqlCommand cnd = new SqlCommand("select * from papers", cn);
+            SqlCommand cnd = cm.Open("select * from papers");
 
             //execute query
             SqlDataReader reader = cnd.ExecuteReader();
@@ -117,17 +114,16 @@ namespace Assignment
                 //add paper to list
                 paperList.Add(p);
             }
-            cn.Close();
+            cm.Close();
         }
 
-        private void getMajors()
+        public void getMajors()
         {
             //open connection to database
-            SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\bin\Debug\ProjectDB.mdf;Integrated Security=True;Connect Timeout=30");
-            cn.Open();
+            ConnectionManager cm = new ConnectionManager();
 
             //build query
-            SqlCommand cnd = new SqlCommand("select major_papers.major_id, name, paper_code from majors inner join major_papers on majors.major_id = major_papers.major_id", cn);
+            SqlCommand cnd = cm.Open("select major_papers.major_id, name, paper_code from majors inner join major_papers on majors.major_id = major_papers.major_id");
 
             //execute query
             SqlDataReader reader = cnd.ExecuteReader();
@@ -152,10 +148,10 @@ namespace Assignment
                     majorList.Add(new Major(reader[0].ToString(), reader[1].ToString(), papers));
                 }
             }
-            cn.Close();
+            cm.Close();
         }
 
-        private bool doesMajorExist(string major_id, string major_paper)
+        public bool doesMajorExist(string major_id, string major_paper)
         {
             foreach (Major major in majorList)
             {
@@ -178,7 +174,7 @@ namespace Assignment
             return false;
         }
 
-        private void viewAcademicHistory(object sender, RoutedEventArgs e)
+        public void viewAcademicHistory(object sender, RoutedEventArgs e)
         {
             listbox.ItemsSource = academicHistory;
         }
