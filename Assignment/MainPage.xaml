@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Assignment"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="700"
       Title="MainPage">
 
-    <Grid>
+    <Grid Background="White">
 
         <!-- make a align column grid -->
         <Grid.ColumnDefinitions>
@@ -69,7 +69,7 @@
         <StackPanel Grid.Column="1" Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Button Content="Add paper to academic history" Margin="10,0,0,0" Click="addPaperToHistory"/>
             <Button Content="View academic history" Margin="10,0,0,0" Click="viewAcademicHistory"/>
-            <Button Content="View courses" Margin="10,0,0,0" Click="viewCourses"/>
+            <Button Content="Create Study Plan" Margin="10,0,0,0" Click="goToStudyPage"/>
         </StackPanel>
 
         <ListBox x:Name="listbox" Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Margin="10"></ListBox>

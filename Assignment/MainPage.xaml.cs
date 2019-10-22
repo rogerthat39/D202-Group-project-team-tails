@@ -60,10 +60,10 @@ namespace Assignment
             //?
         }
 
-        private void viewCourses(object sender, RoutedEventArgs e)
+        private void goToStudyPage(object sender, RoutedEventArgs e)
         {
-            //clear list box and add the paper list
-            listbox.ItemsSource = paperList;
+            //navigate to other page
+            this.NavigationService.Navigate(new StudyPlanPage());
         }
 
         private void getPapers()
@@ -135,20 +135,14 @@ namespace Assignment
             //loop through results
             while (reader.Read())
             {
-                //check if major exists, otherwise create new Major object and add to list
+                //check if major is in list already, otherwise create new Major object and add to list
                 if(!doesMajorExist(reader[0].ToString(), reader[2].ToString())) {
 
                     List<Paper> papers = new List<Paper>();
 
                     //search for paper using paper code
-                    foreach (Paper p in paperList)
-                    {
-                        if (p.Code == reader[2].ToString())
-                        {
-                            papers.Add(p);
-                            break;
-                        }
-                    }
+                    papers.Add(searchForPaper(reader[2].ToString(), paperList));
+
                     majorList.Add(new Major(reader[0].ToString(), reader[1].ToString(), papers));
                 }
             }
@@ -159,23 +153,28 @@ namespace Assignment
         {
             foreach (Major major in majorList)
             {
+                //if major does exist in majorList
                 if (major.MajorID == major_id)
                 {
                     //add paper to existing major
-                    Paper paper = null;
-                    foreach (Paper p in paperList)
-                    {
-                        if (p.Code == major_paper)
-                        {
-                            paper = p;
-                            break;
-                        }
-                    }
-                    major.Papers.Add(paper);
+                    major.Papers.Add(searchForPaper(major_paper, paperList));
                     return true;
                 }
             }
             return false;
+        }
+
+        //search the given list for the search term and return Paper that matches
+        private Paper searchForPaper(string searchTerm, List<Paper> paperList)
+        {
+            foreach (Paper p in paperList)
+            {
+                if (p.Code == searchTerm)
+                {
+                    return p;
+                }
+            }
+            return null;
         }
 
         private void viewAcademicHistory(object sender, RoutedEventArgs e)
