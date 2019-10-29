@@ -27,14 +27,12 @@ namespace Assignment
             InitializeComponent();
         }
 
+        ConnectionManager cm = new ConnectionManager();
+
         private void clkLogin(object sender, RoutedEventArgs e)
         {
             //open connection to database
-            SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\bin\Debug\ProjectDB.mdf;Integrated Security=True;Connect Timeout=30");
-            cn.Open();
-
-            //build query
-            SqlCommand cnd = new SqlCommand("select * from Users where Username = @u and Password = @p", cn);
+            SqlCommand cnd = cm.Open("select * from users where username = @u and password = @p");
 
             //add parameters
             SqlParameter username = cnd.Parameters.Add("@u", SqlDbType.VarChar);
@@ -51,8 +49,15 @@ namespace Assignment
                 //checking case of username and password
                 if (txtBoxUserName.Text.Equals(reader[0].ToString().TrimEnd()) && txtBoxPassword.Text.Equals(reader[1].ToString().TrimEnd()))
                 {
-                    //navigating to the main page
-                    this.NavigationService.Navigate(new MainPage());
+                    //if role = admin, navigate to admin page
+                    if (reader[2].ToString() == "admin")
+                    {
+                        this.NavigationService.Navigate(new AdminPage());
+                    }
+                    else //if role = student, navigate to the main page
+                    { 
+                        this.NavigationService.Navigate(new MainPage());
+                    }
                 }
                 else
                 {
@@ -66,7 +71,7 @@ namespace Assignment
                 MessageBox.Show("Incorrect username or password");
             }
 
-            cn.Close();
+            cm.Close();
         }
     }
 }

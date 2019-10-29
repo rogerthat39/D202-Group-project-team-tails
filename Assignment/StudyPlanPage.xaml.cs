@@ -30,22 +30,6 @@ namespace Assignment
         List<Paper> academicHistory = new List<Paper>();
         List<Paper> paperList = new List<Paper>();
 
-        /*List<Paper> academicHistory = new List<Paper>
-            {
-                new Paper("D111", "Database Fundamentals", null, 1, new List<int> {1}, null, true, 15),
-                new Paper("T111", "Computer Hardware Fundamentals", null, 1, new List<int> {1}, null, true, 15),
-                new Paper("I101", "Information System Fundamentals", null, 1, new List<int> {1}, null, true, 15)
-            };*/
-
-        /*List<Paper> paperList = new List<Paper>
-            {
-                new Paper("D211", "Database Development", null, 2, new List<int> {1}, new List<String> {"D111"}, true, 15),
-                new Paper("T211", "Security", null, 2, new List<int> {1}, new List<String> {"T111"}, true, 15),
-                new Paper("D111", "Database", null, 1, new List<int> {1}, null, true, 15),
-                new Paper("I203", "Information System Fundamentals", null, 2, new List<int> {1}, new List<String> {"I101"}, false, 15),
-                new Paper("I209", "Industry Placement", null, 2, new List<int> {2}, new List<String> {"I567"}, false, 15)
-            };*/
-
         List<Paper> studyPlan = new List<Paper>();
         int totalCredits = 0;
 
@@ -61,16 +45,17 @@ namespace Assignment
 
             foreach (Paper p in paperList)
             {
-                if (p.Year > 1) //don't want to include year 1 papers in this because they don't have previous papers
+                if (p.Year > 1 && !academicHistory.Contains(p)) //don't want to include year 1 papers (because they don't have previous papers) or papers they've already taken
                 {
-                    //if prerequisites are met, add to recommend papers list
+                    //if prerequisites are met add to recommend papers list
                     if (p.Prerequisites.Count == 2)
                     {
+                        //checking papers with two prerequisites
                         if (searchForPaper(p.Prerequisites[0], academicHistory) != null && searchForPaper(p.Prerequisites[1], academicHistory) != null)
                         {
                             recommendPapers.Add(p);
                         }
-                    }
+                    } //checking papers with one prerequisite
                     else if (p.Prerequisites.Count == 1)
                     {
                         if (searchForPaper(p.Prerequisites[0], academicHistory) != null)
@@ -78,7 +63,7 @@ namespace Assignment
                             recommendPapers.Add(p);
                         }
                     }
-                    else //if no prerequisites - like for I309 and I209
+                    else //no prerequisites - like for I309 and I209
                     {
                         recommendPapers.Add(p);
                     }
@@ -105,8 +90,6 @@ namespace Assignment
         private void createStudyPlan(object sender, RoutedEventArgs e)
         {
             //add compulsory papers
-            //"D211, T211" should be added
-            //d111 is a first year paper
             foreach(Paper p in paperList)
             {
                 if(p.Compulsory && p.Year > 1)
@@ -129,16 +112,5 @@ namespace Assignment
         {
             testStudyPlan();
         }
-
-        /*
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            NavigationService.LoadCompleted += NavigationService_LoadCompleted;
-        }
-
-        private void NavigationService_LoadCompleted(object sender, NavigationEventArgs e)
-        {
-            paperList = (List<Paper>)e.ExtraData;
-        }*/
     }
 }

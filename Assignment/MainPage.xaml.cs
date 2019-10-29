@@ -36,15 +36,26 @@ namespace Assignment
         List<Paper> paperList = new List<Paper>();
         List<Major> majorList = new List<Major>();
         List<Paper> academicHistory = new List<Paper>();
+        ConnectionManager cm = new ConnectionManager();
 
         private void addPaperToHistory(object sender, RoutedEventArgs e)
         {
             //check if a paper is selected
             if (listbox.SelectedIndex >= 0)
             {
-                //add the paper to the academic history list
+                //check if paper is already in academic history
                 Paper x = (Paper)listbox.SelectedItem;
-                academicHistory.Add(x);
+
+                if (!academicHistory.Contains(x))
+                {
+                    //add the paper to the academic history list
+                    academicHistory.Add(x);
+                    MessageBox.Show(x.Code + " " + x.Name + " has been added.");
+                }
+                else
+                {
+                    MessageBox.Show("That paper is already in academic history");
+                }
             }
             else
             {
@@ -72,12 +83,7 @@ namespace Assignment
 
         private void getPapers()
         {
-            //open connection to database
-            SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\bin\Debug\ProjectDB.mdf;Integrated Security=True;Connect Timeout=30");
-            cn.Open();
-
-            //build query
-            SqlCommand cnd = new SqlCommand("select * from papers", cn);
+            SqlCommand cnd = cm.Open("select * from papers");
 
             //execute query
             SqlDataReader reader = cnd.ExecuteReader();
@@ -88,20 +94,20 @@ namespace Assignment
                 //extract information from current result
                 string paperCode = reader[0].ToString();
                 string name = reader[1].ToString();
-                string desc = reader[2].ToString();
-                string year = reader[4].ToString();
-                string credits = reader[5].ToString();
+                string desc = reader[7].ToString();
+                string year = reader[3].ToString();
+                string credits = reader[4].ToString();
 
                 //convert "Y" or "N" to true or false
                 bool compulsory = false;
-                if (reader[3].ToString() == "Y")
+                if (reader[2].ToString() == "Y")
                 {
                     compulsory = true;
                 }
 
                 //convert comma-separated string to list
                 List<int> semesters = new List<int>();
-                string[] s = reader[6].ToString().Split(',');
+                string[] s = reader[5].ToString().Split(',');
                 foreach (String i in s)
                 {
                     semesters.Add(int.Parse(i));
@@ -109,7 +115,7 @@ namespace Assignment
 
                 //convert comma-separated string to list
                 List<String> prerequisites = new List<String>();
-                string[] x = reader[7].ToString().Split(',');
+                string[] x = reader[6].ToString().Split(',');
                 foreach (String i in x)
                 {
                     prerequisites.Add(i);
@@ -121,17 +127,13 @@ namespace Assignment
                 //add paper to list
                 paperList.Add(p);
             }
-            cn.Close();
+            cm.Close();
         }
 
         private void getMajors()
         {
             //open connection to database
-            SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\bin\Debug\ProjectDB.mdf;Integrated Security=True;Connect Timeout=30");
-            cn.Open();
-
-            //build query
-            SqlCommand cnd = new SqlCommand("select major_papers.major_id, name, paper_code from majors inner join major_papers on majors.major_id = major_papers.major_id", cn);
+            SqlCommand cnd = cm.Open("select major_papers.major_id, name, paper_code from majors inner join major_papers on majors.major_id = major_papers.major_id");
 
             //execute query
             SqlDataReader reader = cnd.ExecuteReader();
@@ -150,7 +152,7 @@ namespace Assignment
                     majorList.Add(new Major(reader[0].ToString(), reader[1].ToString(), papers));
                 }
             }
-            cn.Close();
+            cm.Close();
         }
 
         private bool doesMajorExist(string major_id, string major_paper)
