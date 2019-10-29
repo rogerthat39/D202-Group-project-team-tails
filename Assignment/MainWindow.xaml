@@ -6,6 +6,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="675">
+        Title="MainWindow" Height="400" Width="700">
     <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
 </Window>

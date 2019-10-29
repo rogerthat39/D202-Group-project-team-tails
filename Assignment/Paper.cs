@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment
 {
-    class Paper: IComparable<Paper>
+    public class Paper: IComparable<Paper>
     {
         private string code;
         private string name;
@@ -42,11 +42,11 @@ namespace Assignment
         {
             if (this.Semesters.Count == 2)
             {
-                return code + " " + name + " -- Semesters: " + Semesters[0] + " and " + Semesters[1];
+                return code + " " + name + " -- Semesters: " + Semesters[0] + " and " + Semesters[1] + " --Year: " + Year;
             }
             else
             {
-                return code + " " + name + " -- Semester: " + Semesters[0];
+                return code + " " + name + " -- Semester: " + Semesters[0] + " --Year: " + Year;
             }
         }
 
