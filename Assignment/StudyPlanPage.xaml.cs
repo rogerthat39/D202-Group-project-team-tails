@@ -20,27 +20,31 @@ namespace Assignment
     /// </summary>
     public partial class StudyPlanPage : Page
     {
-        public StudyPlanPage()
+        public StudyPlanPage(List<Paper> ah, List<Paper> p)
         {
             InitializeComponent();
-            //this.Loaded += Page_Loaded;
+            academicHistory = ah;
+            paperList = p;
         }
 
-        List<Paper> academicHistory = new List<Paper>
+        List<Paper> academicHistory = new List<Paper>();
+        List<Paper> paperList = new List<Paper>();
+
+        /*List<Paper> academicHistory = new List<Paper>
             {
                 new Paper("D111", "Database Fundamentals", null, 1, new List<int> {1}, null, true, 15),
                 new Paper("T111", "Computer Hardware Fundamentals", null, 1, new List<int> {1}, null, true, 15),
                 new Paper("I101", "Information System Fundamentals", null, 1, new List<int> {1}, null, true, 15)
-            };
+            };*/
 
-        List<Paper> paperList = new List<Paper>
+        /*List<Paper> paperList = new List<Paper>
             {
                 new Paper("D211", "Database Development", null, 2, new List<int> {1}, new List<String> {"D111"}, true, 15),
                 new Paper("T211", "Security", null, 2, new List<int> {1}, new List<String> {"T111"}, true, 15),
                 new Paper("D111", "Database", null, 1, new List<int> {1}, null, true, 15),
                 new Paper("I203", "Information System Fundamentals", null, 2, new List<int> {1}, new List<String> {"I101"}, false, 15),
                 new Paper("I209", "Industry Placement", null, 2, new List<int> {2}, new List<String> {"I567"}, false, 15)
-            };
+            };*/
 
         List<Paper> studyPlan = new List<Paper>();
         int totalCredits = 0;
@@ -48,7 +52,7 @@ namespace Assignment
         private void goToMainPage(object sender, RoutedEventArgs e)
         {
             //navigate back to main page
-            this.NavigationService.GoBack();
+            this.NavigationService.Navigate(new MainPage(academicHistory));
         }
 
         private void recommendPapers(object sender, RoutedEventArgs e)

@@ -21,12 +21,16 @@ namespace Assignment
     /// </summary>
     public partial class MainPage : Page
     {
-        public MainPage()
+        public MainPage(List<Paper> ah = null)
         {
             InitializeComponent();
             getPapers();
             getMajors();
             listbox.ItemsSource = paperList;
+            if(ah != null)
+            {
+                academicHistory = ah;
+            }
         }
 
         List<Paper> paperList = new List<Paper>();
@@ -63,7 +67,7 @@ namespace Assignment
         private void goToStudyPage(object sender, RoutedEventArgs e)
         {
             //navigate to other page
-            this.NavigationService.Navigate(new StudyPlanPage());
+            this.NavigationService.Navigate(new StudyPlanPage(academicHistory, paperList));
         }
 
         private void getPapers()

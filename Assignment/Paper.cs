@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment
 {
-    class Paper: IComparable<Paper>
+    public class Paper: IComparable<Paper>
     {
         private string code;
         private string name;
