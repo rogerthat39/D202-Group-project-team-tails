@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment
 {
-    class Major
+    public class Major
     {
         private string majorID;
         private string name;

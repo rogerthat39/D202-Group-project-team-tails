@@ -147,3 +147,5 @@ C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\
 C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\obj\Debug\Assignment.pdb
 C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\obj\Debug\StudyPlanPage.g.cs
 C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\obj\Debug\StudyPlanPage.baml
+C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\obj\Debug\AdminPage.g.cs
+C:\databse\D202-Group-project-team-tails-sprint-2-login-page-updated\Assignment\obj\Debug\AdminPage.baml
